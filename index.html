@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .main{
+            display: flex;
+            justify-content: row;
+        }
+        .link   {
+            background-color: #ccc;
+            /* margin: 10px 10px; */
+            width: 200px;
+            height: 100vh;
+        }
+        .link >ul>li{
+            padding-left: 20px;
+            padding-top:10px ;
+            padding-bottom:10px ;
+            /* margin-top: 20px; */
+            /* margin-left:20px ; */
+            list-style: none;
+            /* line-height: 20px; */
+            cursor: pointer;
+            }
+        .value > p{
+            font: 700;
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .link ul li:hover{
+            background-color: #ddd;
+        }
+        @media screen  and (max-width:700px){
+            .link{
+                width: 100%;
+                position: absolute  ;
+                height: 50px;
+                display: inline;
+            }
+            .link ul li{
+                display: inline;
+                line-height: 50px;
+                padding:16px 20px 15px 20px;
+            }
+            .value{
+                margin-top: 50px;
+            }
+
+             
+            
+        }
+        @media screen and (max-width:400px) {
+            .link ul li{
+                text-align: center;
+                display: block;
+                background-color: #ccc;
+                width: 100%;
+                padding: 0;
+            }
+            .value{
+                margin-top: 200px;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="link">
+            <ul>
+
+            <li>Home</li>
+            <li>News</li>
+            <li>Containt</li>
+            <li>About</li>
+            </ul>
+        </div>
+        <div class="value">
+            <p>Responsive Sidebar Example</p>
+                This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.
+                
+                We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.
+                
+                <p>Resize the browser window to see the effect.</p>
+        </div>
+    </div>
+</body>
+</html>
